@@ -12,7 +12,7 @@ A demonstração adapta o padrão React de StoreProvider/useReducer e totais der
 
 ## Fotografias
 
-Fotografias de Melike B, Liz Earl e Kaboompics / Karola G, obtidas de páginas públicas do Pexels que indicam uso permitido sob a [licença Pexels](https://www.pexels.com/license/).
+Fotografias de Melike B, Nati, MudaSsir BhaTti, Kader D. Kahraman, Liz Earl e Kaboompics / Karola G, obtidas de páginas públicas do Pexels que indicam uso permitido sob a [licença Pexels](https://www.pexels.com/license/).
 
 Todos os arquivos possuem fonte individual, autor, URL de download e processamento documentados em public/images/demo/credits.json e CREDITS.md. Imagens convertidas para WebP e reduzidas proporcionalmente. Galeria de detalhe usa recorte CSS identificado da mesma foto.
 

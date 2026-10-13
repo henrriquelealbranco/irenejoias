@@ -85,7 +85,9 @@ export function Header({ path, category }: { path: string; category: string }) {
           <a
             className="iconButton favoritesLink"
             href="#/favoritos"
-            aria-label={"Favoritos, " + favCount + " peças"}
+            aria-label={
+              "Favoritos, " + favCount + (favCount === 1 ? " peça" : " peças")
+            }
           >
             <Icon name="heart" width={22} height={22} />
             {favCount > 0 && <span className="counter">{favCount}</span>}
@@ -93,7 +95,9 @@ export function Header({ path, category }: { path: string; category: string }) {
           <a
             className="iconButton"
             href="#/carrinho"
-            aria-label={"Carrinho, " + cartCount + " itens"}
+            aria-label={
+              "Carrinho, " + cartCount + (cartCount === 1 ? " item" : " itens")
+            }
           >
             <Icon name="bag" width={22} height={22} />
             {cartCount > 0 && <span className="counter">{cartCount}</span>}

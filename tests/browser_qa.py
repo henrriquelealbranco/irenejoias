@@ -3,6 +3,7 @@ Run against dev/preview: python tests/browser_qa.py --url http://127.0.0.1:5187
 """
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 from urllib.parse import urlparse
@@ -32,6 +33,11 @@ def clean(page):
     broken=page.locator("img").evaluate_all("(images)=>images.filter(i=>i.complete && !i.naturalWidth).map(i=>i.src)")
     assert not broken,broken
     assert "Lumi" not in page.locator("body").inner_text(),"Upstream branding in interface"
+    # Catch the Windows UTF-8/cp1252 regression in the rendered UI, including labels.
+    labels=page.locator("[aria-label], [placeholder], img[alt], meta[name=description]").evaluate_all("(els)=>els.flatMap(el=>['aria-label','placeholder','alt','content'].map(attr=>el.getAttribute(attr)||''))")
+    rendered=page.locator("body").inner_text()+"\n"+"\n".join(labels)
+    broken_text=re.findall(r"\uFFFD|Ã[\u0080-\u00bf\u0152\u0153\u2030\u20ac]|Â[\u0080-\u00bf]|â[\u0080-\u00bf\u20ac\u201a\u201e\u2020\u2021\u2030\u0152]|ðŸ",rendered)
+    assert not broken_text,{"page":page.url,"broken_text":broken_text}
 with sync_playwright() as pw:
     browser=pw.chromium.launch(headless=True)
     for label,width,height in [("desktop",1440,1000),("mobile",390,844)]:

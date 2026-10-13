@@ -1,4 +1,5 @@
 import credits from "../../public/images/demo/credits.json";
+import { PRODUCTS } from "../data/products";
 import { Icon } from "./Icon";
 export function DemoPage() {
   return (
@@ -63,7 +64,13 @@ export function DemoPage() {
               <a href={im.source} target="_blank" rel="noreferrer">
                 {im.photographer} <Icon name="arrow" width={16} height={16} />
               </a>
-              <span>{im.filename}</span>
+              <span>
+                {PRODUCTS.find((p) => p.image.endsWith("/" + im.filename))
+                  ?.name ??
+                  (im.filename === "hero.webp"
+                    ? "Composição de colares e brincos"
+                    : "Inspiração de estilo")}
+              </span>
             </li>
           ))}
         </ul>

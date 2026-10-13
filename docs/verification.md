@@ -28,3 +28,9 @@ Corrigidos: atributo de prioridade da imagem incompatível com React 18; express
 ## Limites da conferência
 
 Chromium em tamanhos de desktop e celular, sem teste em aparelhos físicos ou Safari/iOS. Integrações comerciais, pagamento, frete, autenticação e administração estão fora da demonstração. Não houve publicação da loja em hospedagem externa nesta etapa.
+
+## Revisão de textos — 13/10/2026
+
+Revisadas 22 páginas/variações de navegação em desktop 1440×1000 e celular 390×844 no navegador integrado: início, catálogo, quatro categorias, 12 produtos, favoritos, carrinho, marca e explicação da demonstração. Nenhum caractere de codificação quebrada ou overflow horizontal encontrado. Também conferidos mensagens de seleção de aro, inclusão de peça, carrinho com item e checkout preenchido com dados fictícios, incluindo a confirmação.
+
+Padronizados UTF-8 e finais de linha nos arquivos de texto com EditorConfig e atributos Git. A verificação de navegador agora detecta regressões de codificação no texto renderizado, nos placeholders, nas descrições de imagens e nos rótulos acessíveis. Ajustados singular/plural, espaçamento do título do carrinho, preços dos filtros, mensagens de estados vazios e identificação legível das fotografias nos créditos. Testes de lógica e build passaram após a revisão; script de QA verificado sintaticamente. Nenhum erro de console na aba de revisão. O item temporário usado no teste foi removido.

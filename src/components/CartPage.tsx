@@ -10,8 +10,8 @@ export function EmptyState({ kind }: { kind: "cart" | "favorites" }) {
       <Icon name={kind === "cart" ? "bag" : "heart"} width={40} height={40} />
       <h2>
         {kind === "cart"
-          ? "Seu carrinho espera por um brilho."
-          : "Guarde os seus detalhes favoritos."}
+          ? "Seu carrinho está vazio."
+          : "Seus favoritos ficam aqui."}
       </h2>
       <p>
         {kind === "cart"
@@ -93,7 +93,7 @@ export function CartPage() {
       <div className="pageHeading">
         <span className="eyebrow">OS DETALHES QUE VOCÊ ESCOLHEU</span>
         <h1>
-          Meu carrinho<span className="headingCount">({cartCount})</span>
+          Meu carrinho <span className="headingCount">({cartCount})</span>
         </h1>
       </div>
       {state.cart.length ? (

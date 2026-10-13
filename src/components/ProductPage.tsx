@@ -29,7 +29,7 @@ export function ProductPage({ product }: { product: Product }) {
       return;
     }
     dispatch({ type: "cart/add", productId: product.id, variant, qty });
-    notify(product.name + " adicionada ao carrinho.");
+    notify("Peça adicionada ao carrinho.");
     setAdded(true);
   }
   return (
@@ -87,7 +87,7 @@ export function ProductPage({ product }: { product: Product }) {
               ))}
             </div>
             <span className="galleryHint">
-              Toque para ampliar
+              Ampliar fotografia
               <br />
               <small>
                 {view + 1} / 2 ·{" "}

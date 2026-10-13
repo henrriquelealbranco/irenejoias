@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { CATEGORIES, PRODUCTS } from "../data/products";
 import { filterProducts } from "../data/catalog";
+import { formatPrice } from "../utils";
 import { catalogHref } from "../navigation";
 import { ProductCard } from "./ProductCard";
 import { DemoNotice } from "./Footer";
@@ -115,7 +116,7 @@ export function CatalogPage({
           </select>
         </label>
         <label>
-          Preço máximo: R$ {(maxPrice / 100).toFixed(0)}
+          Preço máximo: {formatPrice(maxPrice)}
           <input
             type="range"
             aria-label="Preço máximo"
@@ -144,7 +145,7 @@ export function CatalogPage({
       ) : (
         <div className="emptyState">
           <Icon name="search" width={32} height={32} />
-          <h2>Nenhuma peça por aqui.</h2>
+          <h2>Nenhuma peça encontrada.</h2>
           <p>Tente outra busca ou limpe os filtros para explorar a coleção.</p>
           <button className="primaryButton" onClick={clear}>
             Limpar busca e filtros
