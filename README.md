@@ -42,6 +42,20 @@ A navegação utiliza rotas hash, dispensando configuração de reescrita de URL
 
 Sirva a pasta `dist` por HTTP; abrir o HTML pelo protocolo `file://` não é o modo suportado para módulos JavaScript.
 
+## Cloudflare Workers
+
+O arquivo `wrangler.jsonc` publica somente os arquivos estáticos de `dist`, sem servidor ou banco de dados. O nome do projeto Cloudflare é `irenejoias`.
+
+Configuração em **Settings → Build**:
+
+- Root directory: deixe vazio para usar a raiz do repositório (não use `/irenesemijoias`).
+- Build command: `npm run build`.
+- Deploy command: `npx wrangler deploy`.
+- Production branch: `main`.
+- A versão de Node está fixada em `.node-version`. Se precisar defini-la no painel, use `NODE_VERSION=24.19.0`.
+
+Para validar a configuração localmente sem publicar: `npx wrangler deploy --dry-run`. Para publicar pela CLI com uma conta Cloudflare autenticada: `npm run build` seguido de `npx wrangler deploy`.
+
 ## O que funciona
 
 - Página inicial com banner, categorias, peças em destaque, apresentação da marca e Instagram.

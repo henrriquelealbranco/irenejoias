@@ -141,3 +141,6 @@ vite.config.ts.timestamp-*
 # Local browser QA output
 artifacts/
 __pycache__/
+
+# Local Cloudflare development state
+.wrangler/
