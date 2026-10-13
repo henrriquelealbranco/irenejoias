@@ -1,0 +1,202 @@
+{
+  "notice": "Fotografias ilustrativas de banco de imagens. Nao representam pecas reais da Irene Semijoias. Uso em demonstracao visual sob a licenca Pexels. Produtos, nomes, precos e disponibilidade ficticios.",
+  "license_verified": "A licenca Pexels permite baixar, usar e modificar gratuitamente em websites. Nao implica endosso da marca por pessoas ou marcas nas imagens.",
+  "images": [
+    {
+      "filename": "earrings-1.webp",
+      "photographer": "Melike B",
+      "source": "https://www.pexels.com/photo/a-pair-of-gold-earrings-12194361/",
+      "license": "https://www.pexels.com/license/",
+      "download_url": "https://images.pexels.com/photos/12194361/pexels-photo-12194361.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "processing": "Imagem completa, redimensionada proporcionalmente e convertida para WebP; sem alteracoes no produto.",
+      "dimensions": [
+        1100,
+        1198
+      ],
+      "bytes": 113122,
+      "verified_at": "2026-10-13"
+    },
+    {
+      "filename": "earrings-2.webp",
+      "photographer": "Melike B",
+      "source": "https://www.pexels.com/photo/gold-earrings-on-white-surface-12194347/",
+      "license": "https://www.pexels.com/license/",
+      "download_url": "https://images.pexels.com/photos/12194347/pexels-photo-12194347.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "processing": "Imagem completa, redimensionada proporcionalmente e convertida para WebP; sem alteracoes no produto.",
+      "dimensions": [
+        1100,
+        1178
+      ],
+      "bytes": 19974,
+      "verified_at": "2026-10-13"
+    },
+    {
+      "filename": "earrings-3.webp",
+      "photographer": "Nati",
+      "source": "https://www.pexels.com/photo/elegant-gold-earrings-on-white-satin-fabric-28716773/",
+      "license": "https://www.pexels.com/license/",
+      "download_url": "https://images.pexels.com/photos/28716773/pexels-photo-28716773.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "processing": "Imagem completa, redimensionada proporcionalmente e convertida para WebP; sem alteracoes no produto.",
+      "dimensions": [
+        867,
+        1300
+      ],
+      "bytes": 59352,
+      "verified_at": "2026-10-13"
+    },
+    {
+      "filename": "necklaces-1.webp",
+      "photographer": "Melike B",
+      "source": "https://www.pexels.com/photo/photo-of-gold-necklace-12194264/",
+      "license": "https://www.pexels.com/license/",
+      "download_url": "https://images.pexels.com/photos/12194264/pexels-photo-12194264.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "processing": "Imagem completa, redimensionada proporcionalmente e convertida para WebP; sem alteracoes no produto.",
+      "dimensions": [
+        1100,
+        1003
+      ],
+      "bytes": 16722,
+      "verified_at": "2026-10-13"
+    },
+    {
+      "filename": "necklaces-2.webp",
+      "photographer": "Melike B",
+      "source": "https://www.pexels.com/photo/beautiful-gold-necklace-on-white-platform-12194386/",
+      "license": "https://www.pexels.com/license/",
+      "download_url": "https://images.pexels.com/photos/12194386/pexels-photo-12194386.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "processing": "Imagem completa, redimensionada proporcionalmente e convertida para WebP; sem alteracoes no produto.",
+      "dimensions": [
+        1100,
+        1172
+      ],
+      "bytes": 48068,
+      "verified_at": "2026-10-13"
+    },
+    {
+      "filename": "necklaces-3.webp",
+      "photographer": "MudaSsir BhaTti",
+      "source": "https://www.pexels.com/photo/a-necklace-on-a-white-background-7134458/",
+      "license": "https://www.pexels.com/license/",
+      "download_url": "https://images.pexels.com/photos/7134458/pexels-photo-7134458.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "processing": "Imagem completa, redimensionada proporcionalmente e convertida para WebP; sem alteracoes no produto.",
+      "dimensions": [
+        1100,
+        734
+      ],
+      "bytes": 25206,
+      "verified_at": "2026-10-13"
+    },
+    {
+      "filename": "rings-1.webp",
+      "photographer": "Melike B",
+      "source": "https://www.pexels.com/photo/a-gold-ring-on-ring-holder-12194372/",
+      "license": "https://www.pexels.com/license/",
+      "download_url": "https://images.pexels.com/photos/12194372/pexels-photo-12194372.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "processing": "Imagem completa, redimensionada proporcionalmente e convertida para WebP; sem alteracoes no produto.",
+      "dimensions": [
+        1100,
+        952
+      ],
+      "bytes": 21192,
+      "verified_at": "2026-10-13"
+    },
+    {
+      "filename": "rings-2.webp",
+      "photographer": "Melike B",
+      "source": "https://www.pexels.com/photo/gold-diamond-ring-on-white-surface-12194373/",
+      "license": "https://www.pexels.com/license/",
+      "download_url": "https://images.pexels.com/photos/12194373/pexels-photo-12194373.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "processing": "Imagem completa, redimensionada proporcionalmente e convertida para WebP; sem alteracoes no produto.",
+      "dimensions": [
+        1100,
+        1060
+      ],
+      "bytes": 13736,
+      "verified_at": "2026-10-13"
+    },
+    {
+      "filename": "rings-3.webp",
+      "photographer": "Kader D. Kahraman",
+      "source": "https://www.pexels.com/photo/golden-ring-on-white-background-10581426/",
+      "license": "https://www.pexels.com/license/",
+      "download_url": "https://images.pexels.com/photos/10581426/pexels-photo-10581426.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "processing": "Imagem completa, redimensionada proporcionalmente e convertida para WebP; sem alteracoes no produto.",
+      "dimensions": [
+        867,
+        1300
+      ],
+      "bytes": 11818,
+      "verified_at": "2026-10-13"
+    },
+    {
+      "filename": "bracelets-1.webp",
+      "photographer": "Melike B",
+      "source": "https://www.pexels.com/photo/gold-bracelet-in-close-up-photography-12194237/",
+      "license": "https://www.pexels.com/license/",
+      "download_url": "https://images.pexels.com/photos/12194237/pexels-photo-12194237.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "processing": "Imagem completa, redimensionada proporcionalmente e convertida para WebP; sem alteracoes no produto.",
+      "dimensions": [
+        1100,
+        1110
+      ],
+      "bytes": 35728,
+      "verified_at": "2026-10-13"
+    },
+    {
+      "filename": "bracelets-2.webp",
+      "photographer": "Melike B",
+      "source": "https://www.pexels.com/photo/close-up-of-a-gold-bracelet-on-a-rock-placed-on-white-cloth-12168885/",
+      "license": "https://www.pexels.com/license/",
+      "download_url": "https://images.pexels.com/photos/12168885/pexels-photo-12168885.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "processing": "Imagem completa, redimensionada proporcionalmente e convertida para WebP; sem alteracoes no produto.",
+      "dimensions": [
+        1100,
+        1039
+      ],
+      "bytes": 96290,
+      "verified_at": "2026-10-13"
+    },
+    {
+      "filename": "bracelets-3.webp",
+      "photographer": "Melike B",
+      "source": "https://www.pexels.com/photo/close-up-shot-of-a-gold-bracelet-12194339/",
+      "license": "https://www.pexels.com/license/",
+      "download_url": "https://images.pexels.com/photos/12194339/pexels-photo-12194339.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "processing": "Imagem completa, redimensionada proporcionalmente e convertida para WebP; sem alteracoes no produto.",
+      "dimensions": [
+        1100,
+        1057
+      ],
+      "bytes": 32218,
+      "verified_at": "2026-10-13"
+    },
+    {
+      "filename": "hero.webp",
+      "photographer": "Liz Earl",
+      "source": "https://www.pexels.com/photo/gold-jewellery-on-white-surface-26570970/",
+      "license": "https://www.pexels.com/license/",
+      "download_url": "https://images.pexels.com/photos/26570970/pexels-photo-26570970.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "processing": "Imagem completa, redimensionada proporcionalmente e convertida para WebP; sem alteracoes no produto.",
+      "dimensions": [
+        1286,
+        1800
+      ],
+      "bytes": 70914,
+      "verified_at": "2026-10-13"
+    },
+    {
+      "filename": "editorial.webp",
+      "photographer": "Kaboompics / Karola G",
+      "source": "https://www.pexels.com/photo/woman-wearing-beige-shirt-and-gold-necklaces-7273388/",
+      "license": "https://www.pexels.com/license/",
+      "download_url": "https://images.pexels.com/photos/7273388/pexels-photo-7273388.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "processing": "Imagem completa, redimensionada proporcionalmente e convertida para WebP; sem alteracoes no produto.",
+      "dimensions": [
+        1600,
+        1067
+      ],
+      "bytes": 123068,
+      "verified_at": "2026-10-13"
+    }
+  ]
+}

@@ -1,29 +1,24 @@
-const KEY = "gleam_store_v1";
-
-export type PersistedState = {
-  cart: Record<string, number>;
-  favorites: Record<string, true>;
-
-  user?: { id?: string; email: string; name?: string } | null;
-};
-
-export function loadPersisted(): PersistedState | null {
+import type { Product, ShopState } from "../types";
+import { sanitizeState } from "./cart";
+export const STORAGE_KEY = "irene_semijoias_demo_v1";
+export function loadPersisted(products: Product[]): ShopState {
   try {
-    const raw = localStorage.getItem(KEY);
-    if (!raw) return null;
-    const parsed = JSON.parse(raw) as PersistedState;
-    if (!parsed || typeof parsed !== "object") return null;
-    if (!parsed.cart || !parsed.favorites) return null;
-    return parsed;
+    return sanitizeState(
+      JSON.parse(localStorage.getItem(STORAGE_KEY) ?? "null"),
+      products,
+    );
   } catch {
-    return null;
+    return { cart: [], favorites: {} };
   }
 }
-
-export function savePersisted(state: PersistedState): void {
+export function savePersisted(state: ShopState): boolean {
   try {
-    localStorage.setItem(KEY, JSON.stringify(state));
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({ cart: state.cart, favorites: state.favorites }),
+    );
+    return true;
   } catch {
-
+    return false;
   }
 }

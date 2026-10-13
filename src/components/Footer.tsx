@@ -1,145 +1,81 @@
-import { useMemo, useState } from "react";
-import { useStore } from "../store/StoreContext";
-import { supabase } from "../lib/supabase";
-
-type LinkItem = { label: string; onClick?: () => void };
-
-function Col({ title, links }: { title: string; links: LinkItem[] }) {
+import { CATEGORIES } from "../data/products";
+import { catalogHref, INSTAGRAM, WHATSAPP } from "../navigation";
+import { Icon } from "./Icon";
+import { Wordmark } from "./Header";
+export function DemoNotice() {
   return (
-    <div className="fCol">
-      <div className="fTitle">{title}</div>
-      <div className="fLinks">
-        {links.map((l) => (
-          <a
-            key={l.label}
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              l.onClick?.();
-            }}
-          >
-            {l.label}
-          </a>
-        ))}
-      </div>
-    </div>
+    <p className="demoNotice">
+      Produtos, preços e disponibilidade demonstrativos. As fotografias são
+      ilustrativas e não representam peças reais da Irene.
+    </p>
   );
 }
-
-export function Footer({ onNavigate }: { onNavigate: (page: string) => void }) {
-  const { dispatch } = useStore();
-
-  const [email, setEmail] = useState("");
-  const [isSubscribing, setIsSubscribing] = useState(false);
-
-  const canSubscribe = useMemo(
-    () => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim()),
-    [email]
-  );
-
+export function Footer() {
   return (
-    <footer className="footerLux" aria-label="Footer">
-      <div className="footerInner">
-        <div className="fTop">
-          <div className="fAbout">
-            <p>
-              Our jewellery is handmade from 100% recycled silver and gold. Each piece is a sustainable and ethical
-              choice, designed to feel like a signature.
-            </p>
-          </div>
-
-          <Col
-            title="COMPANY"
-            links={[
-              { label: "Our story", onClick: () => onNavigate("OUR STORY") },
-              { label: "Responsibility", onClick: () => onNavigate("RESPONSIBILITY") },
-              { label: "Lumière Finland", onClick: () => onNavigate("LUMIÈRE FINLAND") },
-              { label: "Enchanting Treasure", onClick: () => onNavigate("ENCHANTING TREASURE") },
-              { label: "Visitor Center", onClick: () => onNavigate("VISITOR CENTER") },
-            ]}
-          />
-
-          <Col
-            title="INFO"
-            links={[
-              { label: "Contact us", onClick: () => onNavigate("CONTACT") },
-              { label: "Terms of use", onClick: () => onNavigate("TERMS OF USE") },
-              { label: "Privacy statement", onClick: () => onNavigate("PRIVACY STATEMENT") },
-              { label: "Terms of delivery", onClick: () => onNavigate("TERMS OF DELIVERY") },
-              { label: "Return instructions", onClick: () => onNavigate("RETURN INSTRUCTIONS") },
-              { label: "Jewelry maintenance", onClick: () => onNavigate("JEWELRY MAINTENANCE") },
-            ]}
-          />
-
-          {}
-          <div className="fCol newsletterCol">
-            <div className="fTitle">NEWSLETTER</div>
-            <div className="fNewsletter">
-              <div className="muted small">
-                Early access to new drops, quiet offers, and care notes for pieces you keep forever.
-              </div>
-
-              <form
-                className="newsForm"
-                onSubmit={async (e) => {
-                  e.preventDefault();
-                  const v = email.trim();
-
-                  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) {
-                    dispatch({ type: "toast/show", message: "Please enter a valid email." });
-                    return;
-                  }
-
-                  try {
-                    setIsSubscribing(true);
-
-                    const { error } = await supabase
-                      .from("newsletter_subscriptions")
-                      .upsert({ email: v }, { onConflict: "email" });
-
-                    if (error) throw error;
-
-                    setEmail("");
-                    dispatch({ type: "toast/show", message: "Subscribed. Welcome to Lumière." });
-                  } catch (err: any) {
-                    dispatch({
-                      type: "toast/show",
-                      message: err?.message ?? "Subscription failed. Try again.",
-                    });
-                  } finally {
-                    setIsSubscribing(false);
-                  }
-                }}
-              >
-                <input
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Email address"
-                  aria-label="Email address"
-                />
-
-                <button type="submit" className="btnPrimary" disabled={!canSubscribe || isSubscribing}>
-                  {isSubscribing ? "Subscribing..." : "Subscribe"}
-                </button>
-              </form>
-            </div>
-          </div>
+    <footer className="siteFooter">
+      <div className="container footerGrid">
+        <div className="footerBrand">
+          <a className="brand" href="#/" aria-label="Irene Semijoias — início">
+            <Wordmark />
+          </a>
+          <p>
+            Beleza e autoestima
+            <br />
+            em cada detalhe.
+          </p>
+          <span className="location">
+            <Icon name="pin" width={16} height={16} /> Guarapuava · Paraná
+          </span>
         </div>
-
-        <div className="fBottom">
-          <div className="fLocale">
-            <button className="fSelect" onClick={() => onNavigate("Language (demo)")}>
-              English <span aria-hidden>▾</span>
-            </button>
-            <button className="fSelect" onClick={() => onNavigate("Country / currency (demo)")}>
-              Finland (EUR €) <span className="flag" aria-hidden>🇫🇮</span> <span aria-hidden>▾</span>
-            </button>
-          </div>
-
-          <div className="fCopy">
-            Copyright © {new Date().getFullYear()}, Lumière. All rights reserved. See our terms of use and privacy notice.
-          </div>
+        <div>
+          <h3>Encontre seu brilho</h3>
+          <a href={catalogHref()}>Todas as peças</a>
+          {CATEGORIES.map((c) => (
+            <a key={c} href={catalogHref(c)}>
+              {c}
+            </a>
+          ))}
         </div>
+        <div>
+          <h3>Seu espaço</h3>
+          <a href="#/favoritos">Meus favoritos</a>
+          <a href="#/carrinho">Meu carrinho</a>
+          <a href="#/marca">Conheça a Irene</a>
+          <a href="#/sobre-a-demo">Sobre esta demonstração</a>
+        </div>
+        <div>
+          <h3>Vamos conversar?</h3>
+          <p>
+            Acompanhe a marca e conheça
+            <br />
+            as peças reais.
+          </p>
+          <a
+            className="externalLink"
+            href={INSTAGRAM}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Icon name="instagram" width={17} height={17} /> Instagram{" "}
+            <Icon name="arrow" width={16} height={16} />
+          </a>
+          <a
+            className="externalLink"
+            href={WHATSAPP}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Conversar no WhatsApp <Icon name="arrow" width={16} height={16} />
+          </a>
+          <small>Atendimento em todo o Brasil.</small>
+        </div>
+      </div>
+      <div className="container footerBottom">
+        <span>Irene Semijoias · Proposta de loja virtual</span>
+        <a href="#/sobre-a-demo">Demonstração sem pedidos ou pagamentos</a>
+      </div>
+      <div className="container">
+        <DemoNotice />
       </div>
     </footer>
   );
